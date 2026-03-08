@@ -12,6 +12,9 @@ import {
   Clock3,
 } from "lucide-react";
 
+import logoLight from "/logo-l.jpeg";
+import logoDark from "/logo-d.jpeg";
+
 const WHATSAPP_NUMBER = "573144610933";
 
 const aboutArtist = {
@@ -310,36 +313,32 @@ export default function TattooLandingPage() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <a href="#inicio" className="flex items-center gap-3">
-            <div
-              className={cn(
-                "flex h-10 w-10 items-center justify-center border text-sm font-bold tracking-[0.25em]",
-                isDark
-                  ? "border-white/20 bg-white/[0.03] text-white"
-                  : "border-[#7b1e28]/25 bg-[#7b1e28]/[0.05] text-[#7b1e28]"
-              )}
-            >
-              .
-            </div>
-            <div>
-              <p
-                className={cn(
-                  "text-[11px] uppercase tracking-[0.35em]",
-                  isDark ? "text-white/55" : "text-[#7b1e28]/60"
-                )}
-              >
-                MONTT.INK
-              </p>
-              <h1
-                className={cn(
-                  "text-sm font-semibold tracking-[0.2em]",
-                  isDark ? "text-white" : "text-[#201718]"
-                )}
-              >
-                STUDIO
-              </h1>
-            </div>
-          </a>
+  <img
+    src={isDark ? logoDark : logoLight}
+    alt="Montt Ink Logo"
+    className="h-10 w-10 object-cover"
+  />
 
+  <div>
+    <p
+      className={cn(
+        "text-[11px] uppercase tracking-[0.35em]",
+        isDark ? "text-white/55" : "text-[#7b1e28]/60"
+      )}
+    >
+      MONTT.INK
+    </p>
+
+    <h1
+      className={cn(
+        "text-sm font-semibold tracking-[0.2em]",
+        isDark ? "text-white" : "text-[#201718]"
+      )}
+    >
+      STUDIO
+    </h1>
+  </div>
+</a>
           <nav className="hidden items-center gap-7 md:flex">
             {nav.map((item) => (
               <a
